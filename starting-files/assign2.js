@@ -545,6 +545,6 @@ document.addEventListener("DOMContentLoaded", function () {
     divCredit.appendChild(a);
     setTimeout(function () {
       divCredit.innerHTML = "";
-    }, 2000);
+    }, 5000);
   }
 });
