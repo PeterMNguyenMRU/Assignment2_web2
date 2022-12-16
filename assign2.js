@@ -9,7 +9,7 @@ const api =
 */
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Grabs the two loaders in the HTML file reader for use - DONE
+  // Grabs the two loaders in the HTML file reader for use - 
   const loader1 = document.querySelector("#loader1 section");
   const loader2 = document.querySelector("#loader2 section");
   const loader3 = document.querySelector("#loader3 section");
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const alert = document.querySelector("#alert");
 
   /* 
-    Retrive songs from API - DONE 
+    Retrive songs from API -  
   */
   var songs;
   var activeSongList;
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-  // Local storage functions - DONE
+  // Local storage functions - 
   function updateStorage() {
     localStorage.setItem("songs", JSON.stringify(songs));
   }
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* 
-    Basic Song Search Component - DONE 
+    Basic Song Search Component -  
   */
   function displaySearchView() {
     loader1.innerHTML = "";
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const artistSelect = document.querySelector("#artistSelect");
     const genreSelect = document.querySelector("#genreSelect");
 
-    // Create the Basic Song Search Portion - DONE
+    // Create the Basic Song Search Portion - 
     function createSearch() {
       createInputs("titleI", "Title", true, "titleSelect");
       createInputs("artistI", "Artist", false, "artistSelect");
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loader1.appendChild(div);
     }
 
-    // Disbales select if not chosen by the radio button - DONE
+    // Disbales select if not chosen by the radio button - 
     artistSelect.disabled = true;
     genreSelect.disabled = true;
 
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
       select.disabled = false;
     }
 
-    // Fill each select field with options - DONE
+    // Fill each select field with options - 
     songs.forEach((song) => {
       createAttribute(song.song_id, song.title, titleSelect);
     });
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
       select.appendChild(opt);
     }
 
-    // Clears/hides the search results - DONE
+    // Clears/hides the search results - 
     document
       .querySelector("#clearButton")
       .addEventListener("click", function () {
@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
         activeSongList = [];
       });
 
-    // Searches for song based on the id value of the selected radio button - DONE
+    // Searches for song based on the id value of the selected radio button - 
     document
       .querySelector("#filterButton")
       .addEventListener("click", function () {
@@ -374,7 +374,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* 
-    Song Information and Charts Component - NOT DONE
+    Song Information and Charts Component - 
   */
   function singleSong(songID) {
     loader1.innerHTML = "";
@@ -488,7 +488,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /*
-    Playlist Component - NOT DONE
+    Playlist Component - 
   */
   function displayPlaylistView() {
     loader1.innerHTML = "";
